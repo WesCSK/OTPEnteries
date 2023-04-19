@@ -7,15 +7,84 @@
 
 import SwiftUI
 
+struct OTPTextField: View {
+    let numberOfFields: Int
+    @FocusState private var fieldFocus: Int?
+    @State var enterValue: [String]
+    @State var oldValue = ""
+    
+    init(numberOfFields: Int) {
+        self.numberOfFields = numberOfFields
+        self.enterValue = Array(repeating: "", count: numberOfFields)
+    }
+    
+    var body: some View {
+        HStack(spacing: 10) {
+            ForEach(0..<numberOfFields, id: \.self) { index in
+                TextField("", text: $enterValue[index], onEditingChanged: { editing in
+                    if editing {
+                        oldValue = enterValue[index]
+                    }
+                })
+                    .keyboardType(.numberPad)
+                    .frame(width: 48, height: 48)
+                    .background(Color.gray.opacity(0.1))
+                    .cornerRadius(5)
+                    .multilineTextAlignment(.center)
+                    .focused($fieldFocus, equals: index)
+                    .tag(index)
+                    .onChange(of: enterValue[index]) { newValue in
+                        if !newValue.isEmpty {
+                            if enterValue[index].count > 1 {
+                                let currentValue = Array(enterValue[index])
+                                
+                                // ADD THIS IF YOU DON'T HAVE TO HIDE THE KEYBOARD WHEN THEY ENTERED
+                                // THE LAST VALUE.
+                                // if oldValue.count == 0 {
+                                //    enterValue[index] = String(enterValue[index].suffix(1))
+                                //    return
+                                // }
+                                
+                                if currentValue[0] == Character(oldValue) {
+                                    enterValue[index] = String(enterValue[index].suffix(1))
+                                } else {
+                                    enterValue[index] = String(enterValue[index].prefix(1))
+                                }
+                            }
+                            
+                            if index == numberOfFields-1 {
+                                // COMMENT IF YOU DON'T HAVE TO HIDE THE KEYBOARD WHEN THEY ENTERED
+                                // THE LAST VALUE.
+                                fieldFocus = nil
+                            } else {
+                                fieldFocus = (fieldFocus ?? 0) + 1
+                            }
+                        } else {
+                            fieldFocus = (fieldFocus ?? 0) - 1
+                        }
+                    }
+            }
+        }
+    }
+}
+
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            
+            Text("OTP code is sent to your mobile number.")
+                .foregroundColor(.gray)
+                .padding(.vertical, 38)
+            
+            OTPTextField(numberOfFields: 6)
+            
+            Spacer()
+            
+            Text("Didn't recieve code? **Request again**")
+            
+                .navigationTitle("Verify Phone")
+                .navigationBarTitleDisplayMode(.inline)
         }
-        .padding()
     }
 }
 
