@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftRUI
 
 struct OTPTextField: View {
     let numberOfFields: Int
@@ -80,7 +81,13 @@ struct ContentView: View {
             
             Spacer()
             
+            RUIRoundedCornerTextButton(text: "Submit", action: {
+                
+            })
+            .padding(.horizontal)
+            
             Text("Didn't recieve code? **Request again**")
+                .padding(.vertical)
             
                 .navigationTitle("Verify Phone")
                 .navigationBarTitleDisplayMode(.inline)

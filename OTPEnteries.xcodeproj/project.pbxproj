@@ -11,6 +11,7 @@
 		203B6A6129F0144300F0BD86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203B6A6029F0144300F0BD86 /* ContentView.swift */; };
 		203B6A6329F0144400F0BD86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203B6A6229F0144400F0BD86 /* Assets.xcassets */; };
 		203B6A6629F0144400F0BD86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203B6A6529F0144400F0BD86 /* Preview Assets.xcassets */; };
+		203B6A6E29F02B5D00F0BD86 /* SwiftRUI in Frameworks */ = {isa = PBXBuildFile; productRef = 203B6A6D29F02B5D00F0BD86 /* SwiftRUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				203B6A6E29F02B5D00F0BD86 /* SwiftRUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = OTPEnteries;
+			packageProductDependencies = (
+				203B6A6D29F02B5D00F0BD86 /* SwiftRUI */,
+			);
 			productName = OTPEnteries;
 			productReference = 203B6A5B29F0144300F0BD86 /* OTPEnteries.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 203B6A5229F0144300F0BD86;
+			packageReferences = (
+				203B6A6C29F02B5D00F0BD86 /* XCRemoteSwiftPackageReference "SwiftRUI" */,
+			);
 			productRefGroup = 203B6A5C29F0144300F0BD86 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		203B6A6C29F02B5D00F0BD86 /* XCRemoteSwiftPackageReference "SwiftRUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Sweekwang/SwiftRUI.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		203B6A6D29F02B5D00F0BD86 /* SwiftRUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 203B6A6C29F02B5D00F0BD86 /* XCRemoteSwiftPackageReference "SwiftRUI" */;
+			productName = SwiftRUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 203B6A5329F0144300F0BD86 /* Project object */;
 }
