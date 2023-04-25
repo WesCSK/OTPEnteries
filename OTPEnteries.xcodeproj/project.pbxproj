@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		201F04EB29F78E9B0044A9AB /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201F04EA29F78E9B0044A9AB /* OTPTextField.swift */; };
 		203B6A5F29F0144300F0BD86 /* OTPEnteriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203B6A5E29F0144300F0BD86 /* OTPEnteriesApp.swift */; };
 		203B6A6129F0144300F0BD86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203B6A6029F0144300F0BD86 /* ContentView.swift */; };
 		203B6A6329F0144400F0BD86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203B6A6229F0144400F0BD86 /* Assets.xcassets */; };
@@ -16,7 +15,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		201F04EA29F78E9B0044A9AB /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		203B6A5B29F0144300F0BD86 /* OTPEnteries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTPEnteries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		203B6A5E29F0144300F0BD86 /* OTPEnteriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPEnteriesApp.swift; sourceTree = "<group>"; };
 		203B6A6029F0144300F0BD86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,7 +37,6 @@
 		201F04E929F78E8D0044A9AB /* VIews */ = {
 			isa = PBXGroup;
 			children = (
-				201F04EA29F78E9B0044A9AB /* OTPTextField.swift */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -158,7 +155,6 @@
 			files = (
 				203B6A6129F0144300F0BD86 /* ContentView.swift in Sources */,
 				203B6A5F29F0144300F0BD86 /* OTPEnteriesApp.swift in Sources */,
-				201F04EB29F78E9B0044A9AB /* OTPTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

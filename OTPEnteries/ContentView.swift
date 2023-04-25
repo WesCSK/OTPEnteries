@@ -16,7 +16,7 @@ struct ContentView: View {
                 .foregroundColor(.gray)
                 .padding(.vertical, 38)
             
-            OTPTextField(numberOfFields: 6)
+            // TODO: Create OTPTextField
             
             Spacer()
             
