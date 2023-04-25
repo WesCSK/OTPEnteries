@@ -35,6 +35,7 @@ struct OTPTextField: View {
                     .tag(index)
                     .onChange(of: enterValue[index]) { newValue in
                         if !newValue.isEmpty {
+                            // Update to new value if there is already an value.
                             if enterValue[index].count > 1 {
                                 let currentValue = Array(enterValue[index])
                                 
@@ -52,6 +53,7 @@ struct OTPTextField: View {
                                 }
                             }
                             
+                            // MARK: - Move to Next
                             if index == numberOfFields-1 {
                                 // COMMENT IF YOU DON'T HAVE TO HIDE THE KEYBOARD WHEN THEY ENTERED
                                 // THE LAST VALUE.
@@ -60,6 +62,7 @@ struct OTPTextField: View {
                                 fieldFocus = (fieldFocus ?? 0) + 1
                             }
                         } else {
+                            // MARK: - Move back
                             fieldFocus = (fieldFocus ?? 0) - 1
                         }
                     }
