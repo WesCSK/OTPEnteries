@@ -34,13 +34,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		201F04E929F78E8D0044A9AB /* VIews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VIews;
-			sourceTree = "<group>";
-		};
 		203B6A5229F0144300F0BD86 = {
 			isa = PBXGroup;
 			children = (
@@ -60,7 +53,6 @@
 		203B6A5D29F0144300F0BD86 /* OTPEnteries */ = {
 			isa = PBXGroup;
 			children = (
-				201F04E929F78E8D0044A9AB /* VIews */,
 				203B6A5E29F0144300F0BD86 /* OTPEnteriesApp.swift */,
 				203B6A6029F0144300F0BD86 /* ContentView.swift */,
 				203B6A6229F0144400F0BD86 /* Assets.xcassets */,
