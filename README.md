@@ -5,7 +5,7 @@
 
 # OTP Textfield in SwiftUI |  OTP Pin Fields
 
-In this [tutorial](https://youtu.be/0bg7x37p_JU), you'll learn how to create an OTP Textfield! In this video, we will cover the step-by-step process of building a custom OTP text field that can be used in your SwiftUI projects.
+In this tutorial, you'll learn how to create an OTP Textfield! In this video, we will cover the step-by-step process of building a custom OTP text field that can be used in your SwiftUI projects.
 
 - [Starting Source Code](https://github.com/WesCSK/OTPEnteries/tree/completed)
 
